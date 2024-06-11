@@ -28,13 +28,7 @@ This project implements various data structures in C++ to demonstrate their func
 
 ### Prerequisites
 
-- A C++ compiler (e.g., g++, clang++)
-- CMake (optional, for building the project)
+
 
 ### Installation
 
-1. **Clone the repository:**
-
-   ```sh
-   git clone https://github.com/your-username/data-structure-project.git
-   cd data-structure-project
