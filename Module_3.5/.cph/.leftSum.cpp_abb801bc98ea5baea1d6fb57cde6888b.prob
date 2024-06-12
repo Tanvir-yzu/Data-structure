@@ -1,0 +1,1 @@
+{"name":"Local: leftSum","url":"d:\\Programming\\Phitron\\Data-structure\\Module_3.5\\leftSum.cpp","tests":[{"id":1718177396688,"input":"5\n1 2 3 4 5","output":"0 1 3 6 10"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Programming\\Phitron\\Data-structure\\Module_3.5\\leftSum.cpp","group":"local","local":true}
