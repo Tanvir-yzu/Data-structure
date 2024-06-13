@@ -1,0 +1,84 @@
+### Time Complexity Analysis
+
+Let's analyze the time complexity for each code segment.
+
+#### 1. Code Segment 1
+
+```
+int k = 1;
+while (k <= n) {
+    cout << k << endl;
+    k = k * 2;
+}
+```
+
+**Time Complexity: \(O(\log n)\)**
+
+- The variable `k` starts at 1 and is doubled each time (`k = k * 2`).
+- The loop runs as long as `k <= n`.
+- Since `k` doubles each iteration, the number of iterations is approximately \(\log_2 n\).
+- Therefore, the time complexity is \(O(\log n)\).
+
+#### 2. Code Segment 2
+
+```
+for (int i = 0; i < n; i++)
+    for (int j = i; j > 0; j--)
+        cout << i << j;
+```
+
+**Time Complexity: \(O(n^2)\)**
+
+- The outer loop runs `n` times.
+- The inner loop runs from `i` down to `1`. On average, it runs \(i/2\) times.
+- The total number of iterations is the sum of the series \(1 + 2 + 3 + ... + (n-1)\), which is \(\frac{n(n-1)}{2}\).
+- This results in \(O(n^2)\) time complexity.
+
+#### 3. Code Segment 3
+
+```
+for (int i = 0; i < n; i++)
+    for (int j = i; j > 0; j--)
+        for (int k = j; k > 0; k--)
+            cout << i << j << k;
+```
+
+**Time Complexity: \(O(n^3)\)**
+
+- The outer loop runs `n` times.
+- The middle loop runs from `i` down to `1`. On average, it runs \(i/2\) times.
+- The innermost loop runs from `j` down to `1`. On average, it runs \(j/2\) times.
+- The total number of iterations is the sum of the series for three nested loops, resulting in \(O(n^3)\) time complexity.
+
+#### 4. Code Segment 4
+
+```
+for (int i = n/2; i <= n; i++) {
+    for (int j = 1; j <= n; j = j * 2) {
+        cout << i << j << endl;
+    }
+}
+```
+
+**Time Complexity: \(O(n \log n)\)**
+
+- The outer loop runs from `n/2` to `n`, which is \(n/2\) times.
+- The inner loop starts at 1 and doubles each time (`j = j * 2`), running approximately \(\log_2 n\) times.
+- Therefore, the total number of iterations is \((n/2) \times \log_2 n\), resulting in \(O(n \log n)\) time complexity.
+
+#### 5. Code Segment 5
+
+```
+for (int i = n/2; i <= n; i++) {
+    for (int j = 1; j <= n; j = j + i) {
+        cout << i << j << endl;
+    }
+}
+```
+
+**Time Complexity: \(O(n \log n)\)**
+
+- The outer loop runs from `n/2` to `n`, which is \(n/2\) times.
+- The inner loop increments `j` by `i` each time. Therefore, the number of iterations of the inner loop depends on the value of `i`.
+- For a fixed `i`, the inner loop runs approximately \(n/i\) times. The total iterations can be approximated by the harmonic series, resulting in a logarithmic behavior.
+- Thus, the complexity is \(O(n \log n)\).
